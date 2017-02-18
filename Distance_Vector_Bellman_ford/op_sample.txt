@@ -1,0 +1,268 @@
+@dv$ cat data
+  0     3    999     7   999   999
+  3     0      6   999     1   999
+999     6      0     2   999     5
+  7   999      2     0     4   999
+999     1    999     4     0     9
+999   999      5   999     9     0
+@dv$ 
+@dv$ ./dv
+1. Input Cost matrix in file
+2. Get path from source to destination
+3. Simulate failure of a node
+4. Simulate link failure
+Any other key to exit
+1
+Enter the name of cost matrix file
+./data
+nodes in topology: 6
+Cost metrix is :
+0	3	999	7	999	999	
+3	0	6	999	1	999	
+999	6	0	2	999	5	
+7	999	2	0	4	999	
+999	1	999	4	0	9	
+999	999	5	999	9	0	
+
+
+
+
+
+
+
+Running DV algorithm node_count: 6
+
+Objective 1: Number of iterations: 23
+
+Objective 2: Final Matrix after running BellMan Ford Algorithm on given cost matrix:
+0	3	9	7	4	13	
+3	0	6	5	1	10	
+9	6	0	2	6	5	
+7	5	2	0	4	7	
+4	1	6	4	0	9	
+13	10	5	7	9	0	
+
+
+Objective 3: Shortest Path from each node to other in given topology:
+Path from 1 to 2 is:
+distance: 3
+1 -> 2
+Number of hops: 1
+
+Path from 1 to 3 is:
+distance: 9
+1 -> 2 -> 3
+Number of hops: 2
+
+Path from 1 to 4 is:
+distance: 7
+1 -> 4
+Number of hops: 1
+
+Path from 1 to 5 is:
+distance: 4
+1 -> 2 -> 5
+Number of hops: 2
+
+Path from 1 to 6 is:
+distance: 13
+1 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 2 to 3 is:
+distance: 6
+2 -> 3
+Number of hops: 1
+
+Path from 2 to 4 is:
+distance: 5
+2 -> 5 -> 4
+Number of hops: 2
+
+Path from 2 to 5 is:
+distance: 1
+2 -> 5
+Number of hops: 1
+
+Path from 2 to 6 is:
+distance: 10
+2 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 3 to 4 is:
+distance: 2
+3 -> 4
+Number of hops: 1
+
+Path from 3 to 5 is:
+distance: 6
+3 -> 4 -> 5
+Number of hops: 2
+
+Path from 3 to 6 is:
+distance: 5
+3 -> 6
+Number of hops: 1
+
+
+=======================
+Path from 4 to 5 is:
+distance: 4
+4 -> 5
+Number of hops: 1
+
+Path from 4 to 6 is:
+distance: 7
+4 -> 3 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 5 to 6 is:
+distance: 9
+5 -> 6
+Number of hops: 1
+
+
+=======================
+
+=======================
+1. Input Cost matrix in file
+2. Get path from source to destination
+3. Simulate failure of a node
+4. Simulate link failure
+Any other key to exit
+2
+Please enter to and from:
+1
+5
+Path from 5 to 1 is:
+distance: 4
+5 -> 2 -> 1
+Number of hops: 2
+1. Input Cost matrix in file
+2. Get path from source to destination
+3. Simulate failure of a node
+4. Simulate link failure
+Any other key to exit
+4
+Please enter nodes between which link has failed :
+3
+6
+
+
+
+
+
+
+Running DV algorithm node_count: 6
+
+Objective 1: Number of iterations: 24
+
+Objective 2: Final Matrix after running BellMan Ford Algorithm on given cost matrix:
+0	3	9	7	4	13	
+3	0	6	5	1	10	
+9	6	0	2	6	15	
+7	5	2	0	4	13	
+4	1	6	4	0	9	
+13	10	15	13	9	0	
+
+
+Objective 6: Shortest Path from each node to other in given topology:
+Path from 1 to 2 is:
+distance: 3
+1 -> 2
+Number of hops: 1
+
+Path from 1 to 3 is:
+distance: 9
+1 -> 2 -> 3
+Number of hops: 2
+
+Path from 1 to 4 is:
+distance: 7
+1 -> 4
+Number of hops: 1
+
+Path from 1 to 5 is:
+distance: 4
+1 -> 2 -> 5
+Number of hops: 2
+
+Path from 1 to 6 is:
+distance: 13
+1 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 2 to 3 is:
+distance: 6
+2 -> 3
+Number of hops: 1
+
+Path from 2 to 4 is:
+distance: 5
+2 -> 5 -> 4
+Number of hops: 2
+
+Path from 2 to 5 is:
+distance: 1
+2 -> 5
+Number of hops: 1
+
+Path from 2 to 6 is:
+distance: 10
+2 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 3 to 4 is:
+distance: 2
+3 -> 4
+Number of hops: 1
+
+Path from 3 to 5 is:
+distance: 6
+3 -> 4 -> 5
+Number of hops: 2
+
+Path from 3 to 6 is:
+distance: 15
+3 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 4 to 5 is:
+distance: 4
+4 -> 5
+Number of hops: 1
+
+Path from 4 to 6 is:
+distance: 13
+4 -> 5 -> 6
+Number of hops: 2
+
+
+=======================
+Path from 5 to 6 is:
+distance: 9
+5 -> 6
+Number of hops: 1
+
+
+=======================
+
+=======================
+1. Input Cost matrix in file
+2. Get path from source to destination
+3. Simulate failure of a node
+4. Simulate link failure
+Any other key to exit
+e
